@@ -1,5 +1,5 @@
 ---
-name: startup-playbook
+name: startup-playbook-skill
 version: 1.0.0
 description: A step-by-step operating playbook for building a high-growth startup, distilled from Y Combinator's "How to Start a Startup" (CS183B) lectures. Use it to figure out what stage a founder is at and what to do next.
 triggers:

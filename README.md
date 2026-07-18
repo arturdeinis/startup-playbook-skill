@@ -33,22 +33,22 @@ Copy the skill into your Claude Code skills directory:
 
 ```bash
 git clone https://github.com/arturdeinis/startup-playbook-skill.git
-mkdir -p ~/.claude/skills/startup-playbook
-cp startup-playbook-skill/SKILL.md ~/.claude/skills/startup-playbook/
-cp -R startup-playbook-skill/references ~/.claude/skills/startup-playbook/
+mkdir -p ~/.claude/skills/startup-playbook-skill
+cp startup-playbook-skill/SKILL.md ~/.claude/skills/startup-playbook-skill/
+cp -R startup-playbook-skill/references ~/.claude/skills/startup-playbook-skill/
 ```
 
 Or clone directly into place:
 
 ```bash
-git clone https://github.com/arturdeinis/startup-playbook-skill.git ~/.claude/skills/startup-playbook
+git clone https://github.com/arturdeinis/startup-playbook-skill.git ~/.claude/skills/startup-playbook-skill
 ```
 
 (Skills also work at the project level in `.claude/skills/` inside a repo.)
 
 ## Use
 
-In Claude Code, trigger it with `/startup-playbook`, or just ask a startup question and it will surface on its own:
+In Claude Code, trigger it with `/startup-playbook-skill`, or just ask a startup question and it will surface on its own:
 
 - "Is my idea good?"
 - "How do I get my first users?"
