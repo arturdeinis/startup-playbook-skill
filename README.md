@@ -1,4 +1,4 @@
-# Startup Playbook — a Claude Code skill
+# Startup Playbook skill
 
 A stage-by-stage operating playbook for building a **high-growth startup**, packaged as a [Claude Code](https://claude.com/claude-code) skill. It's distilled from Y Combinator's *How to Start a Startup* (Stanford **CS183B**) — the 20 lectures by Sam Altman, Paul Graham, Peter Thiel, Dustin Moskovitz, Adora Cheung, Alex Schultz, Kevin Hale, Brian Chesky, Patrick & John Collison, Ben Silbermann, Aaron Levie, Reid Hoffman, Keith Rabois, Ben Horowitz, Emmett Shear, Hosain Rahman, Marc Andreessen, Ron Conway, Tyler Bosmeny, and others.
 
