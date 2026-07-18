@@ -58,6 +58,16 @@ In Claude Code, trigger it with `/startup-playbook-skill`, or just ask a startup
 
 Claude will locate your stage, open the matching reference, and give you the next 1–3 concrete actions.
 
+### How triggering works
+
+Apart from the explicit `/startup-playbook-skill` command, the skill is matched **semantically, not by exact keywords.** Claude sees the skill's name and description and decides whether your request is about building a high-growth startup — it doesn't scan for a fixed list of words. So the examples above (and the `triggers` in `SKILL.md`) are illustrative, not an allowlist:
+
+- Requests that match the *intent* fire it even if they share no words with the examples — e.g. "my users keep churning, what do I do?" or "should I bring on a co-founder?"
+- A sentence that merely *mentions* "startup" in passing won't fire it if the request isn't actually about building one.
+- Because the description is scoped to **hyper-growth startups**, questions about a lifestyle business, consultancy, or generic side project may not match at all.
+
+To make it fire more broadly or more narrowly, edit the `description` and `triggers` fields in `SKILL.md` — those are the only levers that control matching.
+
 ## Scope & caveat
 
 This advice is calibrated for **hyper-growth startups**. Much of it (aim for monopoly, try *not* to hire, all-in commitment, raise from strength) is deliberately wrong for a small business, a consultancy, or a side project. Use accordingly.
