@@ -76,6 +76,8 @@ This advice is calibrated for **hyper-growth startups**. Much of it (aim for mon
 
 The content is an original synthesis and paraphrase of the publicly available CS183B lectures ([startupclass.samaltman.com](https://startupclass.samaltman.com/) / [YC's How to Start a Startup](https://www.ycombinator.com/library)). It contains no lecture transcripts — only distilled, attributed guidance. All credit for the underlying ideas belongs to the original speakers.
 
+> **Unofficial project.** This is an independent, fan-made summary. It is **not affiliated with, sponsored by, or endorsed by** Y Combinator, Stanford, or any of the lecturers. "Y Combinator," "How to Start a Startup," and the speakers' names are used only to attribute the source material.
+
 ## License
 
 [MIT](./LICENSE) — use it, remix it, ship it.
