@@ -32,7 +32,7 @@ The skill's job is to figure out **what stage a founder is at** and tell them **
 Copy the skill into your Claude Code skills directory:
 
 ```bash
-git clone https://github.com/kabanchik69/startup-playbook.git
+git clone https://github.com/arturdeinis/startup-playbook.git
 mkdir -p ~/.claude/skills/startup-playbook
 cp startup-playbook/SKILL.md ~/.claude/skills/startup-playbook/
 cp -R startup-playbook/references ~/.claude/skills/startup-playbook/
@@ -41,7 +41,7 @@ cp -R startup-playbook/references ~/.claude/skills/startup-playbook/
 Or clone directly into place:
 
 ```bash
-git clone https://github.com/kabanchik69/startup-playbook.git ~/.claude/skills/startup-playbook
+git clone https://github.com/arturdeinis/startup-playbook.git ~/.claude/skills/startup-playbook
 ```
 
 (Skills also work at the project level in `.claude/skills/` inside a repo.)
