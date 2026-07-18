@@ -1,8 +1,8 @@
 # Startup Playbook skill
 
-A stage-by-stage operating playbook for building a **high-growth startup**, packaged as a skill. It's distilled from Y Combinator's *How to Start a Startup* (Stanford **CS183B**) — the 20 lectures by Sam Altman, Paul Graham, Peter Thiel, Dustin Moskovitz, Adora Cheung, Alex Schultz, Kevin Hale, Brian Chesky, Patrick & John Collison, Ben Silbermann, Aaron Levie, Reid Hoffman, Keith Rabois, Ben Horowitz, Emmett Shear, Hosain Rahman, Marc Andreessen, Ron Conway, Tyler Bosmeny, and others.
+A stage-by-stage operating playbook for building a **high-growth startup**, distilled from Y Combinator's *How to Start a Startup* (Stanford **CS183B**) — the 20 lectures by Sam Altman, Paul Graham, Peter Thiel, Dustin Moskovitz, Adora Cheung, Alex Schultz, Kevin Hale, Brian Chesky, Patrick & John Collison, Ben Silbermann, Aaron Levie, Reid Hoffman, Keith Rabois, Ben Horowitz, Emmett Shear, Hosain Rahman, Marc Andreessen, Ron Conway, Tyler Bosmeny, and others.
 
-The skill's job is to figure out **what stage a founder is at** and tell them **what to do next** — and to stop them from doing a later stage's work too early (optimizing growth before retention, hiring before they must, fundraising before traction, adding process before product/market fit).
+It's just plain Markdown — a master `SKILL.md` roadmap plus per-stage references — so it's **not tied to any one tool.** Read it yourself, drop it into any AI assistant or agent, or install it as an agent skill. Its job is to figure out **what stage a founder is at** and tell them **what to do next** — and to stop them doing a later stage's work too early (optimizing growth before retention, hiring before they must, fundraising before traction, adding process before product/market fit).
 
 ## What's inside
 
@@ -27,46 +27,31 @@ The skill's job is to figure out **what stage a founder is at** and tell them **
 1. **Before product/market fit, only two things matter:** build the product and talk to users.
 2. **Execution and momentum are the lifeblood.** There's no credit for trying — only for making something the market wants.
 
-## Install
+## How to use it
 
-Copy the skill into your Claude Code skills directory:
+The whole thing is portable Markdown, so use whichever mode fits.
 
-```bash
-git clone https://github.com/arturdeinis/startup-playbook-skill.git
-mkdir -p ~/.claude/skills/startup-playbook-skill
-cp startup-playbook-skill/SKILL.md ~/.claude/skills/startup-playbook-skill/
-cp -R startup-playbook-skill/references ~/.claude/skills/startup-playbook-skill/
-```
+### 1 · Read it (no tools)
 
-Or clone directly into place:
+Open `SKILL.md`, find your stage, then read the matching file in `references/`. It's written to be read by a person as much as by a machine.
+
+### 2 · With any AI assistant or agent
+
+Model-agnostic — works with ChatGPT, Claude, Gemini, Cursor, Copilot, or any LLM / agent framework. Give the assistant `SKILL.md` (and the relevant `references/*.md`) as context — a system prompt, custom instructions, an uploaded file, or a pasted block — then ask your question:
+
+> *Use this playbook. Figure out what stage my startup is at and tell me what to do next.* — then attach or paste `SKILL.md`.
+
+### 3 · As a Claude Code skill
+
+Clone it into your skills directory:
 
 ```bash
 git clone https://github.com/arturdeinis/startup-playbook-skill.git ~/.claude/skills/startup-playbook-skill
 ```
 
-(Skills also work at the project level in `.claude/skills/` inside a repo.)
+(Skills also work per-project in a repo's `.claude/skills/`.) Then invoke it with `/startup-playbook-skill`, or just ask a startup question and it surfaces on its own — "Is my idea good?", "How do I get my first users?", "Do I have product/market fit?", "Review my pitch", "When should I hire / raise money?" Claude locates your stage, opens the matching reference, and gives you the next 1–3 concrete actions.
 
-## Use
-
-In Claude Code, trigger it with `/startup-playbook-skill`, or just ask a startup question and it will surface on its own:
-
-- "Is my idea good?"
-- "How do I get my first users?"
-- "Do I have product/market fit?"
-- "Review my pitch."
-- "When should I hire / raise money?"
-
-Claude will locate your stage, open the matching reference, and give you the next 1–3 concrete actions.
-
-### How triggering works
-
-Apart from the explicit `/startup-playbook-skill` command, the skill is matched **semantically, not by exact keywords.** Claude sees the skill's name and description and decides whether your request is about building a high-growth startup — it doesn't scan for a fixed list of words. So the examples above (and the `triggers` in `SKILL.md`) are illustrative, not an allowlist:
-
-- Requests that match the *intent* fire it even if they share no words with the examples — e.g. "my users keep churning, what do I do?" or "should I bring on a co-founder?"
-- A sentence that merely *mentions* "startup" in passing won't fire it if the request isn't actually about building one.
-- Because the description is scoped to **hyper-growth startups**, questions about a lifestyle business, consultancy, or generic side project may not match at all.
-
-To make it fire more broadly or more narrowly, edit the `description` and `triggers` fields in `SKILL.md` — those are the only levers that control matching.
+**Triggering is semantic, not keyword-exact.** Claude reads the skill's name and description and decides whether your request is about building a high-growth startup — it doesn't scan for a fixed word list. So the examples above (and the `triggers` in `SKILL.md`) are illustrative, not an allowlist: an intent-matching request fires it even with no shared words ("my users keep churning, what do I do?"), a passing mention of "startup" won't, and lifestyle-business / consultancy / side-project questions may not match at all. To widen or narrow it, edit the `description` and `triggers` in `SKILL.md`.
 
 ## Scope & caveat
 
